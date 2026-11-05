@@ -1,0 +1,91 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+@font-face {
+    font-family: 'Blinker ExtraLight';
+    src: url('/resource/font/blinker/Blinker-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Blinker SemiBold";
+    src: url("/resource/font/blinker/Blinker-SemiBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.card {
+    background-color: #aabbffaa;
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text {
+    border-bottom: 1px solid #999999;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    gap: 20px;
+}
+
+.input {
+    background-color: #aabbff;
+    border: 1px solid #999999;
+    padding: 10px;
+    border-radius: 100px;
+    width: 300px;
+    height: 20px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    color: #384fae;
+}
+
+.submitbutton {
+    padding: 12px;
+    background-color: #3892ae;
+    border: 1px solid #999999;
+    color: #ffffff;
+    border-radius: 100px;
+    font-size: larger;
+    cursor: pointer;
+    font-family: "Blinker SemiBold";
+    transform: translateY(-30px);
+    margin-top: 40px;
+}
+
+.errorarea {
+    color: #ff5555;
+    text-wrap: wrap;
+    position: absolute;
+    transform: translateY(150px);
+    margin-top: 45px;
+}
+
+.signupcard {
+    height: 500px;
+}

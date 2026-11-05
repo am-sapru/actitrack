@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | ActiTrack</title>
+    <link rel="stylesheet" href="/resource/css/dashboard/login/login.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="card signupcard">
+            <div class="title">
+                <h1 class="text">
+                    Sign up
+                </h1>
+            </div>
+            <div class="form">
+                <a href="/login" class="loginbutton">Log In</a>
+                <form class="form" id="mainform">
+                    <label>
+                        Username
+                        <input type="text" id="username" class="usernameinput input">
+                    </label>
+
+                    <label>
+                        Password
+                        <input type="password" id="password" class="passwordinput input">
+                    </label>
+
+                    <label>
+                        Email
+                        <input type="text" id="email" class="emailinput input">
+                    </label>
+                    <br>
+                    <input type="submit" value="Submit" class="submitbutton" id="submitbutton">
+                </form>
+                <div class="errorarea" id="errorarea"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/resource/js/signup/signup.js" type="module"></script>
+</body>
+</html>

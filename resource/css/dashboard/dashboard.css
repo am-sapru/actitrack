@@ -1,0 +1,403 @@
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.main-wrapper, .below {
+    width: 100%;
+    height: calc(100% - 36px);
+}
+
+.below {
+    display: flex;
+}
+
+@font-face {
+    font-family: 'Blinker ExtraLight';
+    src: url('/resource/font/blinker/Blinker-ExtraLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Blinker SemiBold";
+    src: url("/resource/font/blinker/Blinker-SemiBold.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.topbar {
+    border-bottom: 1px solid #999999;
+    display: flex;
+    align-items: center;
+    background-color: #aabbffaa;
+}
+
+.actitrack-logo {
+    display: flex;
+    align-items: center;
+    font-family: "Blinker SemiBold";
+}
+
+.actitracklogoimg {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    margin-left: 10px;
+    border-radius: 100px;
+    filter: hue-rotate(200deg);
+}
+
+.username {
+    margin-left: auto;
+    /* margin-right: 15px; */
+}
+.username-wrapper {
+    display: flex;
+    margin-left: auto;
+    margin-right: 15px;
+}
+
+.sidebar {
+    border-right: 1px solid #999999;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #aabbffaa;
+}
+
+.svgicon {
+    display: flex;
+    background-color: #aabbff;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.sidebaricon {
+    display: flex;
+    background-color: #aabbff;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.sidebaricon:hover {
+    background-color: #99aaff;
+}
+
+.maintitle {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw - 51px);
+    background-color: #aabbffaa;
+    border-bottom: 1px solid #999999;
+}
+
+.maintitleh1 {
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.todoactivities {
+    background-color: #aabbff;
+    width: 300px;
+    height: 400px;
+    margin: 30px;
+    border-radius: 15px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.titleofsection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #000000;
+}
+
+.nothingtodo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555555;
+    margin-top: 5px;
+}
+
+.sectioncontent {
+    background-color: #c6d2ff;
+    border-radius: 15px;
+    height: 300px;
+    width: 250px;
+}
+
+.topcards {
+    background-color: #aabbffaa;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: 450px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.main-area {
+    background-color: #ffffff;
+}
+
+.accountsettingsbutton {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.accountsettingsbutton:hover {
+    transform: rotate(10deg) scale(110%);
+}
+
+.accountsettingsdialog {
+    border: none;
+    background-color: #aabbff;
+    border-radius: 15px;
+}
+
+.accountsettingsdialog::backdrop {
+    background-color: rgb(30, 60, 70, 0.5);
+}
+
+.accsettingstitle {
+    font-family: "Blinker ExtraLight";
+}
+
+.accsetinput {
+    background-color: #aabbff;
+    border: 1px solid #999999;
+    padding: 10px;
+    border-radius: 100px;
+    width: 300px;
+    height: 20px;
+}
+
+.accsetinput:focus {
+    outline: none;
+}
+
+.accsetlabel {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0 20px 0;
+}
+
+.deleteaccountbutton {
+    background-color: #ff9999;
+    border-radius: 100px;
+    border: 1px solid #999999;
+    padding: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+
+.deleteaccountbutton:focus {
+    outline: none;
+    border: 1px solid #999999;
+}
+
+.deleteaccountbutton:hover {
+    animation-name: shake;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+}
+
+.accsettopbtns {
+    display: flex;
+    width: 100%;
+}
+
+.accsetclose {
+    margin-left: auto;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.accsetclose:hover {
+    transform: rotate(180deg);
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+dialog:focus {
+    outline: none;
+    border: none;
+}
+
+dialog {
+    overflow: hidden;
+}
+
+@keyframes close {
+    50% {
+        width: 5px;
+        height: auto;
+    }
+    100% {
+        width: 50px;
+        height: 0px;
+    }
+}
+
+#accsetusername {
+    font-family: monospace;
+    color: #555555;
+    text-transform: uppercase;
+    transform: translateY(-15px);
+}
+
+.toastareaactive {
+    animation-name: toast-in;
+    animation-duration: 1s;
+    background-color: #99aaff;
+    border-radius: 15px;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.toastarea {
+    position: fixed;
+    transform: translateY(-135px);
+    margin: 10px;
+    padding: 10px;
+    width: 400px;
+}
+
+@keyframes toast_in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.closetoast {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closetoast:hover {
+    transform: rotate(180deg);
+}
+
+.accsettogglepassword {
+    transform: translateY(-59.5px) translateX(265px);
+    position: fixed;
+    background-color: #aabbff;
+    border: 1px solid #999999;
+    padding: 10px;
+    border-radius: 100px;
+    cursor: pointer;
+    user-select: none;
+    transition: none;
+}
+
+.accsettogglepassword:hover {
+    background-color: #c6d2ff;
+}
+
+.accsettogglepassword:focus {
+    outline: none;
+}
+
+.confirmaccdeletedialog {
+    border: none;
+    background-color: #aabbff;
+    border-radius: 15px;
+}
+
+.confirmaccdeletedialog::backdrop {
+    background-color: rgb(30, 60, 70, 0.5);
+}
+
+.accdeleteconfirminputbox {
+    background-color: #aabbff;
+    border: 1px solid #999999;
+    padding: 10px;
+    border-radius: 100px;
+    width: 300px;
+    height: 20px;
+}
+
+.accdeleteconfirminputbox:focus {
+    outline: none;
+}
+
+.accdeletedibuttons {
+    margin-top: 10px
+}
+
+.accdelbutton {
+    background-color: #aabbff;
+    border: 1px solid #999999;
+    padding: 10px;
+    border-radius: 100px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.accdelcancel {
+    background-color: #c6d2ff;
+}
+
+.accdelcontinue {
+    background-color: #ff9999;
+}

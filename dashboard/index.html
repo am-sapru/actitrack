@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | ActiTrack</title>
+    <link rel="stylesheet" href="/resource/css/dashboard/dashboard.css">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="topbar">
+            <div class="actitrack-logo">
+                <img src="/resource/png/at.png" alt="ActiTrack Logo" class="actitracklogoimg">
+                <h2 class="logoname">ActiTrack</h2>
+            </div>
+            <div class="username-wrapper">
+                <div class="username" id="username">Your name is missing. This is a bug.</div>
+                <button class="accountsettingsbutton" id="accsetbutton" title="Account Settings">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="48 -912 864 864" width="18px"
+                        fill="#555555">
+                        <path
+                            d="M440-96q-17 0-29-10t-15-26l-15-78q-23-9-44.5-21T296-259l-75 26q-15 5-30.5-.5T167-253l-40-70q-8-14-5-29.5t15-26.5l59-52q-2-12-3-24t-1-25q0-13 1-25t3-24l-59-52q-12-11-15-26.5t5-29.5l40-70q8-14 23.5-19.5t30.5-.5l75 26q19-16 40.5-28t44.5-21l15-78q3-16 15-26t29-10h80q17 0 29 10t15 26l15 78q23 9 44.5 21t40.5 28l75-26q15-5 30.5.5T793-707l40 70q8 14 5 29.5T823-581l-59 52q2 12 3 24t1 25q0 13-1 25t-3 24l59 52q12 11 15 26.5t-5 29.5l-40 70q-8 14-23.5 19.5t-30.5.5l-75-26q-19 16-40.5 28T579-210l-15 78q-3 16-15 26t-29 10h-80Zm40-240q60 0 102-42t42-102q0-60-42-102t-102-42q-60 0-102 42t-42 102q0 60 42 102t102 42Z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="below">
+            <div class="sidebar">
+                <div class="actionbtn">
+                    <div class="svgicon" id="svgicon"></div>
+                </div>
+                <div class="navbtns">
+                    <div class="homebtn sidebaricon" id="homebtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#121212">
+                            <path
+                                d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                        </svg>
+                    </div>
+                    <div class="activitiesbtn sidebaricon" id="actibtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#121212">
+                            <path
+                                d="M348.5-291.5Q360-303 360-320t-11.5-28.5Q337-360 320-360t-28.5 11.5Q280-337 280-320t11.5 28.5Q303-280 320-280t28.5-11.5Zm0-160Q360-463 360-480t-11.5-28.5Q337-520 320-520t-28.5 11.5Q280-497 280-480t11.5 28.5Q303-440 320-440t28.5-11.5Zm0-160Q360-623 360-640t-11.5-28.5Q337-680 320-680t-28.5 11.5Q280-657 280-640t11.5 28.5Q303-600 320-600t28.5-11.5ZM440-280h240v-80H440v80Zm0-160h240v-80H440v80Zm0-160h240v-80H440v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z" />
+                        </svg>
+                    </div>
+                    <div class="statsbtn sidebaricon" id="statsbtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#121212">
+                            <path
+                                d="M280-280h80v-200h-80v200Zm320 0h80v-400h-80v400Zm-160 0h80v-120h-80v120Zm0-200h80v-80h-80v80ZM200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z" />
+                        </svg>
+                    </div>
+                    <div class="settingsbtn sidebaricon" id="settingsbtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#121212">
+                            <path
+                                d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="helpbtns">
+                    <div class="tutbtn sidebaricon" id="tutbtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#121212">
+                            <path
+                                d="M513.5-254.5Q528-269 528-290t-14.5-35.5Q499-340 478-340t-35.5 14.5Q428-311 428-290t14.5 35.5Q457-240 478-240t35.5-14.5ZM442-394h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                        </svg>
+                    </div>
+                    <div class="aboutbtn sidebaricon" id="aboutbtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#121212">
+                            <path
+                                d="M440-280h80v-240h-80v240Zm68.5-331.5Q520-623 520-640t-11.5-28.5Q497-680 480-680t-28.5 11.5Q440-657 440-640t11.5 28.5Q463-600 480-600t28.5-11.5ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="main-area" id="main_area">
+                <div class="maintitle">
+                    <h1 class="maintitleh1">Home</h1>
+                </div>
+                <div class="topcards">
+                    <div class="todoactivities">
+                        <h2 class="titleofsection">
+                            To Do
+                        </h2>
+                        <div class="sectioncontent">
+                            <i class="nothingtodo">Good Work! Nothing due!</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="toastarea" id="toastarea"></div>
+    <dialog class="accountsettingsdialog" id="accountsettingspage">
+        <div class="accsettopbtns">
+            <button class="deleteaccountbutton" id="accsetdeleteaccount">Delete Account</button>
+            <div class="accsetclose" id="accsetclose"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#121212"><path d="m480-424 116 116q11 11 28 11t28-11q11-11 11-28t-11-28L536-480l116-116q11-11 11-28t-11-28q-11-11-28-11t-28 11L480-536 364-652q-11-11-28-11t-28 11q-11 11-11 28t11 28l116 116-116 116q-11 11-11 28t11 28q11 11 28 11t28-11l116-116Zm0 344q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg></div>
+        </div>
+        <h1 class="accsettingstitle">
+            Account Settings
+        </h1>
+        <p id="accsetusername">There is no username. This is a bug.</p>
+        <div class="accountarea">
+            <label class="emaillabel accsetlabel">
+                Email
+                <input type="text" id="accsetemailinput" class="accsetemailinput accsetinput">
+            </label>
+            <label class="passwordlabel accsetlabel">
+                Password
+                <input type="password" id="accsetpasswordinput" class="accsetpasswordinput accsetinput">
+            </label>
+            <button class="accsettogglepassword" id="accsettogglepassword">Show</button>
+        </div>
+    </dialog>
+    <dialog class="confirmaccdeletedialog" id="confirmaccdeletedialog">
+        <h2 class="titleaccdeletedi">
+            Type <i>CONTINUE</i> to confirm.
+        </h2>
+        <label>
+            <input type="text" id="accdeleteconfirminputbox" class="accdeleteconfirminputbox" placeholder="Are you sure?">
+        </label>
+        <div class="accdeletedibuttons">
+            <button class="accdelcancel accdelbutton" id="accdelcancel">Cancel</button>
+            <button class="accdelcontinue accdelbutton" id="accdelcontinue">Continue</button>
+        </div>
+    </dialog>
+
+    <script src="/resource/js/dashboard/main/dashboard.js"></script>
+</body>
+
+</html>

@@ -99,7 +99,11 @@
     <dialog class="accountsettingsdialog" id="accountsettingspage">
         <div class="accsettopbtns">
             <button class="deleteaccountbutton" id="accsetdeleteaccount">Delete Account</button>
-            <div class="accsetclose" id="accsetclose"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#121212"><path d="m480-424 116 116q11 11 28 11t28-11q11-11 11-28t-11-28L536-480l116-116q11-11 11-28t-11-28q-11-11-28-11t-28 11L480-536 364-652q-11-11-28-11t-28 11q-11 11-11 28t11 28l116 116-116 116q-11 11-11 28t11 28q11 11 28 11t28-11l116-116Zm0 344q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg></div>
+            <div class="accsetclose" id="accsetclose"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="#121212">
+                    <path
+                        d="m480-424 116 116q11 11 28 11t28-11q11-11 11-28t-11-28L536-480l116-116q11-11 11-28t-11-28q-11-11-28-11t-28 11L480-536 364-652q-11-11-28-11t-28 11q-11 11-11 28t11 28l116 116-116 116q-11 11-11 28t11 28q11 11 28 11t28-11l116-116Zm0 344q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z" />
+                </svg></div>
         </div>
         <h1 class="accsettingstitle">
             Account Settings
@@ -122,13 +126,92 @@
             Type <i>CONTINUE</i> to confirm.
         </h2>
         <label>
-            <input type="text" id="accdeleteconfirminputbox" class="accdeleteconfirminputbox" placeholder="Are you sure?">
+            <input type="text" id="accdeleteconfirminputbox" class="accdeleteconfirminputbox"
+                placeholder="Are you sure?">
         </label>
         <div class="accdeletedibuttons">
             <button class="accdelcancel accdelbutton" id="accdelcancel">Cancel</button>
             <button class="accdelcontinue accdelbutton" id="accdelcontinue">Continue</button>
         </div>
     </dialog>
+    <dialog class="createneweventlistview" id="dialogneweventlistview">
+        <div class="nweevetopbtns">
+            <div class="accsetclose" id="neweventlistclose">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#121212">
+                    <path
+                        d="m480-424 116 116q11 11 28 11t28-11q11-11 11-28t-11-28L536-480l116-116q11-11 11-28t-11-28q-11-11-28-11t-28 11L480-536 364-652q-11-11-28-11t-28 11q-11 11-11 28t11 28l116 116-116 116q-11 11-11 28t11 28q11 11 28 11t28-11l116-116Zm0 344q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z" />
+                </svg>
+            </div>
+        </div>
+        <div class="nweevemainarea">
+            <h2 class="nweevetitle">
+                New Event
+            </h2>
+            <span class="nweeveviewtype">List View</span>
+            <div class="nweeveform">
+                <input type="text" class="nweeveinput" id="nweevelistname" placeholder="Event Name">
+                <input type="text" class="nweeveinput stet" id="nweeveliststart" placeholder="Start Time">
+                <label class="ampmsliderlabel" id="ampmsliderlabelstarttime">
+                    <div class="toggle">
+                        <input type="checkbox" id="ampmcheckboxstarttime" class="ampmcheckbox">
+                        <div class="indicator" id="ampmtoggleindicatorstarttime">AM</div>
+                    </div>
+                </label>
+                <input type="text" class="nweeveinput stet" id="nweevelistend" placeholder="End Time">
+                <label class="ampmsliderlabel" id="ampmsliderlabelendtime">
+                    <div class="toggle">
+                        <input type="checkbox" id="ampmcheckboxendtime" class="ampmcheckbox">
+                        <div class="indicator" id="ampmtoggleindicatorendtime">AM</div>
+                    </div>
+                </label>
+            </div>
+            <button class="neewevesubmit" id="nweevesubmit">Continue</button>
+        </div>
+    </dialog>
+    <div class="at_homesection at_hidden" id="homepagedashboard">
+        <div class="maintitle">
+            <h1 class="maintitleh1">Home</h1>
+        </div>
+        <div class="topcards">
+            <div class="todoactivities">
+                <h2 class="titleofsection">
+                    To Do
+                </h2>
+                <div class="sectioncontent">
+                    <i class="nothingtodo">Good Work! Nothing due!</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="at_todosection at_hidden" id="todopagedashboard">
+        <div class="maintitle">
+            <h1 class="maintitleh1">To Do</h1>
+        </div>
+        <div class="todo_block">
+            <h2 class="titleofsection todotitlesection">
+                To Do
+            </h2>
+            <div class="maintodoarea">
+                <div class="toptabstodo">
+                    <label class="todotoptabslabel">
+                        <input type="radio" name="todotoptabs" class="radiotoptabs" checked>
+                        List View
+                    </label>
+                    <label class="todotoptabslabel">
+                        <input type="radio" name="todotoptabs" class="radiotoptabs">
+                        Calender View
+                    </label>
+                </div>
+                <div class="bottomareatodo">
+                    <button class="addevent" id="todolistaddeventlistview">+ Add Event</button>
+                    <div class="todolistlist at_hidden" id="todolistlist">
+                        <i class="nothingtodo">No items! Click <code class="addeventcode">+ Add Event</code> to create a new item.</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="/resource/js/dashboard/main/dashboard.js"></script>
 </body>

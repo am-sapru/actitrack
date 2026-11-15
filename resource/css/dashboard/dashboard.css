@@ -401,3 +401,216 @@ dialog {
 .accdelcontinue {
     background-color: #ff9999;
 }
+
+.at_hidden {
+    display: none;
+}
+
+.todo_block {
+    background-color: #aabbffaa;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    /* height: 450px; */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todotitlesection {
+    height: 30px;
+}
+
+.maintodoarea {
+    background-color: #aabbff;
+    width: 92%;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+.maintodoarea {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.radiotoptabs {
+    display: none;
+}
+
+.todotoptabslabel {
+    padding: 10px;
+    transition: none;
+    margin: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.toptabstodo {
+    display: flex;
+    justify-content: center;
+}
+
+.todotoptabslabel:has(.radiotoptabs:checked) {
+    border-bottom: 3px solid #0000ff;
+}
+
+.bottomareatodo {
+    margin: 30px;
+}
+
+.todolistlist {
+    display: flex;
+    flex-direction: column;
+}
+
+.todolistcheckbox {
+    background-color: #aabbff;
+    color: #aabbff;
+    transform: scale(110%);
+    border: 1px solid #121212;
+    border-radius: 100px;
+}
+
+.todolistlistitem {
+    background-color: #c6d2ff;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+}
+
+.scheduleddate {
+    margin-left: auto;
+}
+
+.todolisteventtitle {
+    margin: 0 5px 0 5px;
+}
+
+.todolistlistitem:has(.todolistcheckbox:checked) {
+    text-decoration: line-through;
+    color: rgb(121, 121, 121);
+}
+
+.addevent {
+    background-color: #aabbff;
+    border: 1px solid #999999;
+    padding: 10px;
+    border-radius: 100px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.addevent:hover {
+    background-color: #c6d2ff;
+}
+
+.createneweventlistview {
+    border: none;
+    background-color: #aabbff;
+    border-radius: 15px;
+    width: 250px;
+}
+
+.createneweventlistview[open] {
+    display: flex;
+    flex-direction: column;
+}
+
+.createneweventlistview::backdrop {
+    background-color: rgb(30, 60, 70, 0.5);
+}
+
+.nweeveinput {
+    background-color: #aabbffaa;
+    border: 1px solid #999999;
+    padding: 10px;
+    border-radius: 100px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 91%;
+    margin-bottom: 10px;
+}
+
+.nweeveinput:focus {
+    border: 1px solid #999999;
+    outline: none;
+}
+
+.nweevetitle {
+    margin-bottom: 30px;
+}
+
+.nweeveviewtype {
+    position: fixed;
+    font-family: monospace;
+    color: #555555;
+    text-transform: uppercase;
+    transform: translateY(-35px);
+}
+
+.stet {
+    width: 50%;
+}
+
+.toggle {
+    background-color: #999999;
+    width: 50px;
+    padding: 3px;
+    height: 20px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.ampmcheckbox {
+    display: none;
+}
+
+.indicator {
+    background-color: #c6d2ff;
+    width: 30px;
+    height: 20px;
+    border-radius: 100px;
+    font-size: 9pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.ampmcheckbox:checked ~ .indicator {
+    transform: translateX(20px)
+}
+
+.ampmsliderlabel {
+    display: flex;
+    width: fit-content;
+    position: fixed;
+    transform: translateY(-40.999px) translateX(170px) scale(120%);
+}
+
+.neewevesubmit {
+    background-color: #aabbff;
+    border: 1px solid #999999;
+    padding: 10px;
+    border-radius: 100px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.neewevesubmit:focus {
+    border: 1px solid #999999;
+    outline: none;
+}
+
+.neewevesubmit:hover {
+    background-color: #c6d2ff;
+}
+
+.addeventcode {
+    margin: 10px;
+}

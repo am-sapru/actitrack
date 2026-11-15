@@ -1,5 +1,6 @@
 var unamediv = document.getElementById("username")
 var svgicon = document.getElementById("svgicon")
+var mainarea = document.getElementById("main_area")
 
 var accountsettingspage = document.getElementById("accountsettingspage")
 var accsetbutton = document.getElementById("accsetbutton")
@@ -15,6 +16,75 @@ var accdelcancel = document.getElementById("accdelcancel")
 var accdelcontinue = document.getElementById("accdelcontinue")
 var accdeleteconfirminputbox = document.getElementById("accdeleteconfirminputbox")
 
+var todopagedashboard = document.getElementById("todopagedashboard")
+var homepagedashboard = document.getElementById("homepagedashboard")
+
+var actibtn = document.getElementById("actibtn")
+var homebtn = document.getElementById("homebtn")
+
+var todolistaddeventlistview = document.getElementById("todolistaddeventlistview")
+var addeventlistviewdialog = document.getElementById("dialogneweventlistview")
+var neweventlistclose = document.getElementById("neweventlistclose")
+
+var ampmcheckboxstart = document.getElementById("ampmcheckboxstarttime")
+var ampmtoggleindicatorstart = document.getElementById("ampmtoggleindicatorstarttime")
+var ampmsliderlabelstart = document.getElementById("ampmsliderlabelstarttime")
+
+ampmcheckboxstart.addEventListener("change", (e) => {
+    if (e.target.checked) {
+        ampmtoggleindicatorstart.innerHTML = "PM";
+    } else {
+        ampmtoggleindicatorstart.innerHTML = "AM";
+    }
+});
+
+var ampmcheckboxend = document.getElementById("ampmcheckboxendtime")
+var ampmtoggleindicatorend = document.getElementById("ampmtoggleindicatorendtime")
+var ampmsliderlabelend = document.getElementById("ampmsliderlabelendtime")
+
+ampmcheckboxend.addEventListener("change", (e) => {
+    if (e.target.checked) {
+        ampmtoggleindicatorend.innerHTML = "PM";
+    } else {
+        ampmtoggleindicatorend.innerHTML = "AM";
+    }
+});
+
+var nweevesubmit = document.getElementById("nweevesubmit")
+
+var nweeveliststart = document.getElementById("nweeveliststart")
+var nweevelistend = document.getElementById("nweevelistend")
+var nweevelistname = document.getElementById("nweevelistname")
+
+var todolistlist = document.querySelectorAll("#todolistlist")
+
+var eventslistview = []
+
+nweevesubmit.addEventListener("click", () => {
+    addeventlistviewdialog.close()
+    var item = document.createElement("label")
+    item.className = "todolistlistitem"
+    item.innerHTML = `<input type="checkbox" class="todolistcheckbox">
+                            <span class="todolisteventtitle">
+                                ${nweevelistname.value}
+                            </span>
+                            <div class="scheduleddate">${nweeveliststart.value} ${ampmtoggleindicatorstart.innerHTML} - ${nweevelistend.value} ${ampmtoggleindicatorend.innerHTML}</div>`
+    eventslistview.push(item.outerHTML)
+    Array.from(todolistlist).forEach((e) => {
+        // e.appendChild(item.cloneNode(true))
+        e.innerHTML = eventslistview.join("")
+    })
+    mainarea.innerHTML = todopagedashboard.innerHTML
+    nweevelistname.value = ""
+    nweeveliststart.value = ""
+    nweevelistend.value = ""
+    ampmcheckboxstart.checked = false
+    ampmcheckboxend.checked = false
+    ampmtoggleindicatorend.innerHTML = "AM"
+    ampmtoggleindicatorstart.innerHTML = "AM"
+    toast("To Do", "Task created")
+})
+
 var mainpagehomehtml = `<div class="maintitle">
                     <h1 class="maintitleh1">Home</h1>
                 </div>
@@ -28,8 +98,6 @@ var mainpagehomehtml = `<div class="maintitle">
                         </div>
                     </div>
                 </div>`
-
-var mainpagetodohtml = ``
 
 // accountsettingspage.showModal()
 // confirmaccdeletedialog.showModal()
@@ -137,3 +205,20 @@ accdelcontinue.addEventListener("click", () => {
         toast("Account Deletion", "Canceled")
     }
 })
+
+actibtn.addEventListener("click", () => {
+    mainarea.innerHTML = todopagedashboard.innerHTML
+})
+homebtn.addEventListener("click", () => {
+    mainarea.innerHTML = homepagedashboard.innerHTML
+})
+
+mainarea.addEventListener("click", (event) => {
+    if (event.target.closest("#todolistaddeventlistview")) {
+        document.getElementById("dialogneweventlistview").showModal();
+    }
+});
+
+neweventlistclose.addEventListener("click", () => {
+    document.getElementById("dialogneweventlistview").close();
+});

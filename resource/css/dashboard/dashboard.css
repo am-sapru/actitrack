@@ -614,3 +614,27 @@ dialog {
 .addeventcode {
     margin: 10px;
 }
+
+.deleteeventlistview {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 3px;
+    background-color: #b0bfff;
+    border: none;
+    outline: none;
+    width: 20px;
+    height: 20px;
+    padding: none;
+    transform: scale(90%) translateY(-1px);
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.deleteeventlistview:focus {
+    border: none;
+    outline: none;
+}
+
+.deleteeventlistview > svg {
+    transform: scale(200%)
+}

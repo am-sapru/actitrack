@@ -68,7 +68,14 @@ nweevesubmit.addEventListener("click", () => {
                             <span class="todolisteventtitle">
                                 ${nweevelistname.value}
                             </span>
-                            <div class="scheduleddate">${nweeveliststart.value} ${ampmtoggleindicatorstart.innerHTML} - ${nweevelistend.value} ${ampmtoggleindicatorend.innerHTML}</div>`
+                            <div class="scheduleddate">${nweeveliststart.value} ${ampmtoggleindicatorstart.innerHTML} - ${nweevelistend.value} ${ampmtoggleindicatorend.innerHTML}</div>
+                            <button class="deleteeventlistview" onclick="
+                      const parent = this.parentElement;
+                      const index = [...parent.parentElement.children].indexOf(parent);
+                      eventslistview.splice(index, 1);
+                      parent.outerHTML = '';
+                      toast('To Do', 'Task deleted')
+                    "><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" height="24px" width="24px" fill="#121212"><path d="M10.53,30.95L9.05,29.47L18.53,20L9.05,10.53l1.47-1.47L20,18.53l9.47-9.47l1.47,1.47L21.47,20l9.47,9.47l-1.47,1.47L20,21.47l-9.47,9.47Z"/></svg></button>`
     eventslistview.push(item.outerHTML)
     Array.from(todolistlist).forEach((e) => {
         // e.appendChild(item.cloneNode(true))
